@@ -211,3 +211,21 @@ body {
   margin: 10px 0;
   line-height: 1.5;
 }
+
+#location {
+  background-color: #f0ead2;
+  padding: 1rem;
+}
+
+#location h2,
+p,
+iframe {
+  text-align: center;
+  padding: 1rem;
+  color: #6c584c;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+}
