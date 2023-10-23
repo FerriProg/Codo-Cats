@@ -316,3 +316,39 @@ textarea {
   background-color: #6c584c;
   cursor: pointer;
 }
+
+footer {
+  background-color: #6c584c;
+}
+
+.footerNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 12rem;
+}
+
+.footerNav a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  max-width: 102px;
+  text-align: center;
+}
+
+.footerNav a:hover {
+  color: #2b2018;
+}
+
+.icon {
+  color: rgb(50, 217, 81);
+  font-size: 5rem;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+.icon:hover {
+  color: #2b2018;
+}
