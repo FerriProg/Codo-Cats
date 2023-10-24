@@ -231,22 +231,12 @@ iframe {
 }
 
 #form {
-  background-color: #f0ead2;
-  padding-bottom: 2rem;
-}
-
-.formContainer {
-  background-color: #a98467;
-  border-radius: 10px;
-  padding: 1rem;
-  color: #553725;
-}
-
-#form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #f0ead2;
+  padding-bottom: 2rem;
 }
 
 #form h2 {
@@ -260,6 +250,14 @@ iframe {
   padding-bottom: 1rem;
   display: flex;
   justify-content: center;
+}
+
+.formContainer {
+  background-color: #a98467;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #553725;
+  width: 66%;
 }
 
 .theFormParent {
@@ -351,4 +349,181 @@ footer {
 
 .icon:hover {
   color: #2b2018;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    height: fit-content;
+  }
+
+  .navContainer {
+    flex-direction: column;
+    height: initial;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logoContainer h2 {
+    flex-shrink: 0;
+  }
+
+  .navigation .navList {
+    flex-direction: column;
+  }
+
+  .listItem {
+    margin: 0.5rem;
+    padding: 0;
+  }
+
+  .mainContainer {
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .mainChild {
+    padding-right: 0rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mainText {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+
+  .cardsGrandParent {
+    height: initial;
+  }
+
+  .cardsParent {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .curiosities {
+    display: flex;
+    flex-direction: column;
+    height: initial;
+  }
+
+  .curiositiesImage {
+    max-width: 100%;
+    width: auto;
+    height: 30rem;
+  }
+
+  .curiositiesImage img {
+    max-width: 100%;
+    width: auto;
+    height: 30rem;
+    object-fit: cover;
+  }
+
+  .curiositiesDescription {
+    width: 100%;
+  }
+
+  .formContainer {
+    width: 85%;
+  }
+
+  .theForm {
+    width: 80vw;
+  }
+
+  .theInputs {
+    flex-direction: column;
+  }
+
+  .theInputs input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100vw;
+    max-width: 100%;
+  }
+
+  #form h3 {
+    width: 80vw;
+  }
+
+  .formButton {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footerNav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerNav a {
+    margin: 0.5rem;
+  }
+
+  .icon {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .header {
+    height: fit-content;
+  }
+
+  .mainChild {
+    padding-right: 0rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .curiosities {
+    display: flex;
+    flex-direction: column;
+    height: initial;
+  }
+
+  .curiositiesImage {
+    max-width: 100%;
+    width: auto;
+    height: 30rem;
+  }
+
+  .curiositiesImage img {
+    max-width: 100%;
+    width: auto;
+    height: 30rem;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .curiositiesDescription {
+    width: 100%;
+  }
+
+  .formContainer {
+    width: 85%;
+  }
+
+  .theForm {
+    width: 80vw;
+  }
+
+  .theInputs input {
+    width: 48%;
+  }
+
+  textarea {
+    width: 100vw;
+    max-width: 100%;
+  }
 }
