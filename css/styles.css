@@ -230,7 +230,7 @@ iframe {
   justify-content: center;
 }
 
-#form {
+#contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -239,14 +239,14 @@ iframe {
   padding-bottom: 2rem;
 }
 
-#form h2 {
+#contact h2 {
   display: flex;
   justify-content: center;
   font-size: 1.8rem;
   padding: 1rem;
 }
 
-#form h3 {
+#contact h3 {
   padding-bottom: 1rem;
   display: flex;
   justify-content: center;
