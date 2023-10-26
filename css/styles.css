@@ -173,7 +173,7 @@ body {
 }
 
 .cardBody p {
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   overflow: auto !important;
   word-wrap: break-word;
 }
@@ -250,8 +250,8 @@ body {
 }
 
 #location h2,
-p,
-iframe {
+#location p,
+#location iframe {
   text-align: center;
   padding: 1rem;
   color: #6c584c;

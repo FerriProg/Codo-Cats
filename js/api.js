@@ -33,12 +33,136 @@ const showBreeds = async (page) => {
     );
     const breedImageData = await breedImageResponse.json();
 
+    //traduccion de los temperamentos: separo en array segun las comas, recorro el array con un map, y hago un switch
+    //para reemplazar cada palabra en ingles por su traduccion en español. Al final vuelvo a unir con comas y transformo
+    //en string nuevamente para poder mostrarlo.
+
+    let temperamentos = breed.temperament
+      .split(', ')
+      .map((temperamento) => {
+        switch (temperamento) {
+          case 'Active':
+            return 'Activo';
+          case 'Energetic':
+            return 'Enérgico';
+          case 'Independent':
+            return 'Independiente';
+          case 'Dependent':
+            return 'Dependiente';
+          case 'Intelligent':
+            return 'Inteligente';
+          case 'Gentle':
+            return 'Amable';
+          case 'Affectionate':
+            return 'Afectivo';
+          case 'affectionate':
+            return 'Afectivo';
+          case 'Social':
+            return 'Sociable';
+          case 'social':
+            return 'Sociable';
+          case 'Playful':
+            return 'Juguetón';
+          case 'playful':
+            return 'Juguetón';
+          case 'Interactive':
+            return 'Interactivo';
+          case 'Lively':
+            return 'Dinámico';
+          case 'Sensitive':
+            return 'Sensible';
+          case 'Curious':
+            return 'Curioso';
+          case 'Easy Going':
+            return 'Tranquilo';
+          case 'Calm':
+            return 'Calmo';
+          case 'calm':
+            return 'Calmo';
+          case 'Loyal':
+            return 'Leal';
+          case 'loyal':
+            return 'Leal';
+          case 'Agile':
+            return 'Ágil';
+          case 'Fun-loving':
+            return 'Divertido';
+          case 'Relaxed':
+            return 'Relajado';
+          case 'Friendly':
+            return 'Amistoso';
+          case 'Alert':
+            return 'Alerta';
+          case 'Demanding':
+            return 'Demandante';
+          case 'Patient':
+            return 'Paciente';
+          case 'Highly interactive':
+            return 'Altamente interactivo';
+          case 'Mischievous':
+            return 'Travieso';
+          case 'Sweet':
+            return 'Dulce';
+          case 'Quiet':
+            return 'Tranquilón';
+          case 'Peaceful':
+            return 'Pacífico';
+          case 'Clever':
+            return 'Listo';
+          case 'clever':
+            return 'Listo';
+          case 'Devoted':
+            return 'Devoto';
+          case 'Talkative':
+            return 'Charlatán';
+          case 'Warm':
+            return 'Cálido';
+          case 'highly intelligent':
+            return 'Altamente Inteligente';
+          case 'Expressive':
+            return 'Expresivo';
+          case 'Trainable':
+            return 'Entrenable';
+          case 'trainable':
+            return 'Entrenable';
+          case 'inquisitive':
+            return 'Inquisitivo';
+          case 'Adaptable':
+            return 'Adaptable';
+          case 'Loving':
+            return 'Amoroso';
+          case 'Shy':
+            return 'Tímido';
+          case 'Sedate':
+            return 'Sosegado';
+          case 'Easygoing':
+            return 'Tranquilo';
+          case 'Outgoing':
+            return 'Salidor';
+          case 'Adventurous':
+            return 'Aventurero';
+          case 'Sweet-tempered':
+            return 'Dulcecito';
+          case 'Tenacious':
+            return 'Tenaz';
+
+          default:
+            return temperamento;
+        }
+      })
+      .join(', ');
+
     const html = `
       <div class="card">
         <img src="${breedImageData.url}" alt="Cat ${i + 1} image" />
         <div class="cardBody">
           <h3>${breed.name}</h3>
-          <p>${breed.description}</p>
+          <p><b>Temperamento:</b> ${temperamentos}</p>
+          <p><b>Peso:</b> ${breed.weight.metric} kg </p>
+          <p><b>Años de vida:</b> ${breed.life_span} años</p>
+          <p><b>Más información:</b> <a href="${
+            breed.wikipedia_url
+          }" target="_blank">Click aquí</a></p>
         </div>
       </div>
     `;
